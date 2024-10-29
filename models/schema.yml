@@ -25,6 +25,9 @@ sources:
         columns:
           - name: products_id
             description: id identifying the product
+            tests:
+              - unique 
+              - not_null
           - name: purchase_price
             description: price of the item
       - name: ship
@@ -32,6 +35,9 @@ sources:
         columns:
           - name: orders_id
             description: id identifying the order
+            tests:
+              - unique
+              - not_null
           - name: shipping_fee
             description: fee payed for shipping
           - name: logCost
