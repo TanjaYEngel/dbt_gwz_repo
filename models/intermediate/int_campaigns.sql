@@ -6,7 +6,7 @@ UNION ALL
 SELECT *
 FROM {{ ref('stg_raw__bing') }}
 UNION ALL
-SELECT *
+SELECT * 
 FROM {{ ref('stg_raw__criteo') }}
 UNION ALL
 SELECT *
