@@ -8,12 +8,88 @@ sources:
     tables:
       - name: adwords
         identifier: raw_gz_adwords
+        description: data connected to the adwords  
+        tests:
+          - unique:
+              column_name: "(date_date|| '-' || campaign_key)"         
+        columns:
+          - name: date_date
+            description: date of the campaign
+          - name: paid_source
+            description: source of the campaign
+          - name: campaign_key
+            description: unique key identifying the campaign
+          - name: campaign_name
+            description: name of the campaign
+          - name: ads_cost
+            description: cost of the ads in euro
+          - name: impression
+            description: number of persons who viewed the campaign on this platform
+          - name: click
+            description: number of clicks generated through campaign
       - name: bing
         identifier: raw_gz_bing
+        description: data connected to bing  
+        tests:
+          - unique:
+              column_name: "(date_date|| '-' || campaign_key)"             
+        columns:
+          - name: date_date
+            description: date of the campaign
+          - name: paid_source
+            description: source of the campaign
+          - name: campaign_key
+            description: unique key identifying the campaign
+          - name: campaign_name
+            description: name of the campaign
+          - name: ads_cost
+            description: cost of the ads in euro
+          - name: impression
+            description: number of persons who viewed the campaign on this platform
+          - name: click
+            description: number of clicks generated through campaign
       - name: criteo
         identifier: raw_gz_criteo
+        description: data connected to criteo  
+        tests:
+          - unique:
+              column_name: "(date_date|| '-' || campaign_key)"              
+        columns:
+          - name: date_date
+            description: date of the campaign
+          - name: paid_source
+            description: source of the campaign
+          - name: campaign_key
+            description: unique key identifying the campaign
+          - name: campaign_name
+            description: name of the campaign
+          - name: ads_cost
+            description: cost of the ads in euro
+          - name: impression
+            description: number of persons who viewed the campaign on this platform
+          - name: click
+            description: number of clicks generated through campaign
       - name: facebook
         identifier: raw_gz_facebook
+        description: data connected to facebook    
+        tests:
+          - unique:
+              column_name: "(date_date|| '-' || campaign_key)"            
+        columns:
+          - name: date_date
+            description: date of the campaign
+          - name: paid_source
+            description: source of the campaign
+          - name: campaign_key
+            description: unique key identifying the campaign
+          - name: campaign_name
+            description: name of the campaign
+          - name: ads_cost
+            description: cost of the ads in euro
+          - name: impression
+            description: number of persons who viewed the campaign on this platform
+          - name: click
+            description: number of clicks generated through campaign
       - name: sales
         identifier: raw_gz_sales
         description: sales of Greenweez / we have one row per product_id found in each orders_id
