@@ -1,0 +1,16 @@
+#schema.yml
+
+version: 2
+
+sources:
+  - name: raw
+    schema: gw_raw_data
+    tables:
+      - name: adwords
+        identifier: raw_gz_adwords
+      - name: bing
+        identifier: raw_gz_bing
+      - name: criteo
+        identifier: raw_gz_criteo
+      - name: facebook
+        identifier: raw_gz_facebook
