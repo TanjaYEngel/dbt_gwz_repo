@@ -1,4 +1,3 @@
-
 SELECT 
     o.date_date,
     COUNT(o.orders_id) AS nb_transactions,
